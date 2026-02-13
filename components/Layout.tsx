@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { NAV_ITEMS, BOOKING_URL, CONTACT_EMAIL } from '../constants';
-import { ChatAssistant } from './ChatAssistant';
 
 export const Layout: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,11 +11,13 @@ export const Layout: React.FC = () => {
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b border-white/5 bg-slate-950/70 backdrop-blur-lg supports-[backdrop-filter]:bg-slate-950/60">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <NavLink to="/" className="font-bold text-xl tracking-tight text-white flex items-center gap-2">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 font-extrabold text-2xl">
-              ServiceFlow
-            </span>
-            <span className="text-slate-300 font-light">Media</span>
+          <NavLink to="/" className="flex items-center gap-3 group">
+            <div className="flex items-center gap-2 font-bold text-xl tracking-tight text-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 font-extrabold text-2xl">
+                ServiceFlow
+              </span>
+              <span className="text-slate-300 font-light">Media</span>
+            </div>
           </NavLink>
 
           {/* Desktop Nav */}
@@ -92,7 +93,9 @@ export const Layout: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="md:col-span-1">
-              <span className="font-bold text-lg text-white">ServiceFlow Media</span>
+              <NavLink to="/" className="flex items-center gap-2 mb-4 group w-fit">
+                <span className="font-bold text-lg text-white">ServiceFlow Media</span>
+              </NavLink>
               <p className="mt-4 text-sm text-slate-400 leading-relaxed">
                 Helping local service businesses get more booked jobs through proven digital systems.
               </p>
@@ -129,9 +132,6 @@ export const Layout: React.FC = () => {
           </div>
         </div>
       </footer>
-
-      {/* Gemini Chatbot */}
-      <ChatAssistant />
     </div>
   );
 };
