@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ServiceFlow Media | Facebook Ads, Instagram Ads & Websites for Local Service</title>
+    <meta name="description" content="We help local service businesses get more booked jobs using Facebook & Instagram Ads and high-converting websites." />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              slate: {
+                850: '#1e293b',
+                900: '#0f172a',
+                950: '#020617', // Deepest dark blue/black
+              },
+              primary: {
+                500: '#3b82f6',
+                600: '#2563eb',
+              }
+            },
+            backgroundImage: {
+              'gradient-primary': 'linear-gradient(to right, #3b82f6, #8b5cf6)', // Blue to Purple
+              'gradient-dark': 'linear-gradient(to bottom, #020617, #0f172a)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Force high quality text rendering */
+      html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        background-color: #020617;
+      }
+      
+      body { 
+        font-family: 'Inter', sans-serif; 
+        -webkit-font-smoothing: antialiased; 
+        -moz-osx-font-smoothing: grayscale; 
+        text-rendering: optimizeLegibility;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+        background-color: transparent;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      /* --- LAYER 1: FIXED ATMOSPHERE (Orbs) --- */
+      /* Stays with you as you scroll. Z-index -50 (Furthest back) */
+      .fixed-orb-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -50;
+        overflow: hidden;
+        pointer-events: none;
+        background-color: #020617; /* Base Deep Slate */
+      }
+
+      /* Extremely subtle, slow moving blue light */
+      .orb-blue {
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 80vw;
+        height: 80vw;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.07) 0%, transparent 70%); /* Blue */
+        filter: blur(100px);
+        animation: float-deep 40s infinite alternate ease-in-out;
+      }
+
+      /* Extremely subtle, slow moving purple light */
+      .orb-purple {
+        position: absolute;
+        bottom: -20%;
+        right: -10%;
+        width: 90vw;
+        height: 90vw;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(147, 51, 234, 0.05) 0%, transparent 70%); /* Purple */
+        filter: blur(100px);
+        animation: float-wide 45s infinite alternate-reverse ease-in-out;
+      }
+
+      /* --- LAYER 2: ABSOLUTE TEXTURE (Grid) --- */
+      /* Scrolls WITH the page content. Z-index -40 (Above orbs, behind content) */
+      .absolute-grid-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Covers only the top view */
+        z-index: -40;
+        pointer-events: none;
+        
+        background-size: 50px 50px;
+        background-image: 
+          linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        
+        /* Fade out smoothly as it goes down */
+        mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+      }
+
+      @keyframes float-deep {
+        0% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(30px, 20px) scale(1.05); }
+        100% { transform: translate(-20px, 40px) scale(0.95); }
+      }
+
+      @keyframes float-wide {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        50% { transform: translate(-30px, -20px) rotate(2deg); }
+        100% { transform: translate(20px, -40px) rotate(-2deg); }
+      }
+
+      /* Scrollbar Styling */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #020617; }
+      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+      /* Typography overrides */
+      .prose-invert {
+        --tw-prose-body: #94a3b8;
+        --tw-prose-headings: #f8fafc;
+        --tw-prose-lead: #cbd5e1;
+        --tw-prose-links: #60a5fa;
+        --tw-prose-bold: #f8fafc;
+        --tw-prose-hr: #334155;
+        --tw-prose-quotes: #f1f5f9;
+        --tw-prose-code: #f8fafc;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0"
+  }
+}
+</script>
+</head>
+  <body class="text-slate-100 selection:bg-blue-500 selection:text-white">
+    
+    <!-- Fixed Atmosphere (Color) -->
+    <div class="fixed-orb-layer">
+      <div class="orb-blue"></div>
+      <div class="orb-purple"></div>
+    </div>
+
+    <!-- Absolute Texture (Grid) -->
+    <div class="absolute-grid-layer"></div>
+    
+    <div id="root"></div>
+  </body>
+</html>

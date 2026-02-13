@@ -1,11 +1,29 @@
-<div align="center">
+# ServiceFlow Media Website
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A React-based marketing website for a lead generation agency.
 
-  <h1>Built with AI Studio</h2>
+## Configuration
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### Booking Link
+To change the booking link (e.g., Cal.com or Calendly), open `constants.ts` and edit:
+```typescript
+export const BOOKING_URL = "https://cal.com/serviceflow/15min";
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### Contact Form
+Currently, the form constructs a "mailto" link to open the user's email client.
+To use a real backend service like Formspree:
+1. Go to `pages/Contact.tsx`.
+2. Look for the `handleSubmit` function.
+3. Uncomment the `fetch` block and add your Formspree endpoint URL.
 
-</div>
+### AI Chatbot
+The site uses Google Gemini for the chat assistant.
+1. Create a `.env` file in the root.
+2. Add: `REACT_APP_GEMINI_API_KEY=your_key_here` (or just `API_KEY` if using a build system that supports it).
+*Note: In this static output, the key is accessed via `process.env.API_KEY`. ensure your build tool injects this.*
+
+### Colors
+Colors are defined in `index.html` within the Tailwind config script.
+Primary dark: `slate-900`
+Primary accent: `blue-600`
