@@ -11,6 +11,7 @@ export interface ServiceItem {
 export interface PricingTier {
   name: string;
   price: string;
+  subtitle: string;
   features: string[];
   cta: string;
   highlight?: boolean;

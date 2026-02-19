@@ -81,12 +81,13 @@ export const PRICING: PricingTier[] = [
   {
     name: "Starter",
     price: "$1,200",
+    subtitle: "Best for single-service businesses ready to scale.",
     features: [
-      "1 Campaign (FB or IG)",
-      "6 Creative Variations/mo",
-      "Weekly Reporting",
-      "Email Support",
-      "Self-Managed Follow-up"
+      "High-intent lead campaign setup",
+      "Weekly creative testing and optimization",
+      "Custom qualified lead capture forms",
+      "Real-time lead notifications",
+      "Monthly performance reports"
     ],
     cta: "Book Discovery Call"
   },
@@ -94,26 +95,28 @@ export const PRICING: PricingTier[] = [
     name: "Growth",
     price: "$2,000",
     highlight: true,
+    subtitle: "Best for multi-service teams needing consistent work.",
     features: [
-      "2 Campaigns (FB + IG)",
-      "12 Creative Variations/mo",
-      "Weekly Reporting",
-      "Priority Email & Slack",
-      "Follow-up Script Templates",
-      "CRM Integration Setup"
+      "Full-funnel Meta platform setup",
+      "Professional video ad variations",
+      "Automated SMS and email follow-ups",
+      "CRM integration for lead tracking",
+      "Priority Slack and Email support",
+      "Optional landing page build add-on"
     ],
     cta: "Book Discovery Call"
   },
   {
     name: "Scale",
     price: "$3,500",
+    subtitle: "Best for companies looking for market dominance.",
     features: [
-      "4 Campaigns",
-      "Unlimited Creative Testing",
-      "Bi-Weekly Strategy Calls",
-      "Slack Support",
-      "Full CRM Buildout",
-      "Sales Call Review"
+      "Unlimited campaign management",
+      "High-volume content testing",
+      "Advanced SMS and email sequences",
+      "Sales process and script reviews",
+      "Weekly strategy and planning calls",
+      "Custom landing page build included"
     ],
     cta: "Book Discovery Call"
   }

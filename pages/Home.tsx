@@ -176,7 +176,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Honest Pricing</h2>
-            <p className="text-slate-400">Ad spend is paid directly by you to Meta. Cancel anytime.</p>
+            <p className="text-slate-400">Cancel anytime. No long-term commitments required.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
@@ -194,7 +194,8 @@ const Home: React.FC = () => {
                     Most Popular
                   </span>
                 )}
-                <h3 className="text-lg font-semibold text-white mb-2">{tier.name}</h3>
+                <h3 className="text-lg font-semibold text-white mb-1">{tier.name}</h3>
+                <p className="text-xs text-blue-400 font-medium mb-4">{tier.subtitle}</p>
                 <div className="flex items-baseline gap-1 mb-6">
                   <span className="text-4xl font-bold text-white">{tier.price}</span>
                   <span className="text-slate-500">/mo</span>
@@ -225,9 +226,9 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          <div className="text-center max-w-2xl mx-auto space-y-3 p-6 bg-slate-900/50 backdrop-blur-md rounded-xl border border-white/10">
-            <p className="text-slate-200 font-medium">Website builds available as a one-time project or bundled with ongoing ads.</p>
-            <p className="text-slate-500 text-sm">Website Build (one-time): starting at $1,500</p>
+          <div className="text-center max-w-2xl mx-auto space-y-2 p-6 bg-slate-900/50 backdrop-blur-md rounded-xl border border-white/10">
+            <p className="text-slate-300 font-medium">Ad spend is separate and paid directly to the ad platform.</p>
+            <p className="text-slate-400 text-sm">Ask about our 7-Day Pilot.</p>
           </div>
         </div>
       </section>
