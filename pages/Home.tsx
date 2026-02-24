@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2, MonitorSmartphone, Zap } from 'lucide-react';
-import { BOOKING_URL, AUDIT_URL, INDUSTRIES, DELIVERABLES, WEBSITE_DELIVERABLES, PRICING, FAQS, SERVICES_LIST } from '../constants';
+import { BOOKING_URL, AUDIT_URL, INDUSTRIES, DELIVERABLES, WEBSITE_DELIVERABLES, FAQS, SERVICES_LIST } from '../constants';
 
 const Home: React.FC = () => {
   return (
@@ -171,67 +171,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. Pricing */}
-      <section className="bg-slate-900/30 backdrop-blur-sm py-24" id="pricing">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Honest Pricing</h2>
-            <p className="text-slate-400">Cancel anytime. No long-term commitments required.</p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-            {PRICING.map((tier) => (
-              <div 
-                key={tier.name} 
-                className={`relative bg-slate-900/80 backdrop-blur-md rounded-2xl p-8 border flex flex-col transition-transform hover:-translate-y-1 ${
-                  tier.highlight 
-                    ? 'border-blue-500 shadow-[0_0_30px_rgba(37,99,235,0.15)] ring-1 ring-blue-500/50 z-10' 
-                    : 'border-white/10 shadow-xl'
-                }`}
-              >
-                {tier.highlight && (
-                  <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                    Most Popular
-                  </span>
-                )}
-                <h3 className="text-lg font-semibold text-white mb-1">{tier.name}</h3>
-                <p className="text-xs text-blue-400 font-medium mb-4">{tier.subtitle}</p>
-                <div className="flex items-baseline gap-1 mb-6">
-                  <span className="text-4xl font-bold text-white">{tier.price}</span>
-                  <span className="text-slate-500">/mo</span>
-                </div>
-                
-                <ul className="space-y-4 mb-8 flex-1">
-                  {tier.features.map((feat, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-slate-300">
-                      <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0" />
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-full py-3 px-4 rounded-lg font-bold text-center transition-all ${
-                    tier.highlight 
-                      ? 'bg-blue-600 text-white hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/20' 
-                      : 'bg-white/5 text-white hover:bg-white/10'
-                  }`}
-                >
-                  {tier.cta}
-                </a>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center max-w-2xl mx-auto space-y-2 p-6 bg-slate-900/50 backdrop-blur-md rounded-xl border border-white/10">
-            <p className="text-slate-300 font-medium">Ad spend is separate and paid directly to the ad platform.</p>
-            <p className="text-slate-400 text-sm">Ask about our 7-Day Pilot.</p>
-          </div>
-        </div>
-      </section>
 
       {/* 8. FAQ */}
       <section className="container mx-auto px-4 max-w-3xl py-12">
